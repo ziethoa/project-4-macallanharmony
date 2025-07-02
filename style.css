@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{  
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Noto Sans", serif;
 }
 /* ------- */
 body{
@@ -43,10 +46,26 @@ img{
     width: 100%;
 }
 
-.text-1 img, .text-2 img, .text-3 img, .text-5 img, .text-6 img, .text-7 img{
+.text-2 p, .text-3 p, .text-5 p, .text-6 p, .text-7 p{
     width: 52%;
+    font-size: 1.8vw;
+    text-align: justify;
+    line-height: 3.5vw;
+    color: #492c21;
     display: block;
     margin: 0 auto;
+}
+
+.text-1 p{
+    width: 52%;
+    font-size: 2.7vw;
+    text-align: justify;
+    line-height: 3.7vw;
+    color: #492c21;
+    display: block;
+    margin: 0 auto;
+    font-style: italic;
+    font-weight: 700;
 }
 
 .title-1 {
@@ -97,9 +116,36 @@ img{
     width: 100%;
 }
 
-.text-4 img {
-    width: 44%;
-    margin-left: 7%;
+.text-4 .c-0 {
+    width: 45%;
+    margin-left: 6%;
+}
+
+.text-4 .c-1 {
+    width: 100%;
+    font-size: 4.45vw;
+    text-align: justify;
+    line-height: 5.8vw;
+    color: #492c21;
+    font-weight: 700;
+}
+
+.text-4 .c-2 {
+    width: 100%;
+    font-size: 9.9vw;
+    text-align: justify;
+    line-height: 12.2vw;
+    font-weight: 700;
+    color: #492c21;
+    padding-bottom: 3%;
+}
+
+.text-4 .c-3 {
+    width: 100%;
+    font-size: 2.32vw;
+    text-align: justify;
+    line-height: 3.8vw;
+    color: #492c21;
 }
 
 .image-3 {
@@ -145,7 +191,7 @@ img{
     width: 100%;
 }
 
-.text-6 img:nth-of-type(1){
+.text-6 p:nth-of-type(1){
     padding-bottom: 5%;
 }
 
