@@ -215,7 +215,7 @@ img{
 .text-3, 
 .text-4, 
 .text-5, 
-.text-6 img, 
+.text-6 p, 
 .text-7{
     opacity: 0;
     transform: translateX(-50px);
@@ -231,7 +231,7 @@ img{
 .text-3.visible,
 .text-4.visible,
 .text-5.visible,
-.text-6 img.visible,
+.text-6 p.visible,
 .text-7.visible{
     opacity: 1;
     transform: translateX(0px);
