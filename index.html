@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Emagazine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <img src="assets/BG.jpg" alt="background" class="background">
+        <!-- <img src="assets/cover-removebg-preview.png" alt="cover" class="cover-top"> -->
+        <section class="headline">
+            <img src="assets/Headline.png" alt="headline">
+        </section>
+        <section class="text-1">
+            <img src="assets/text-1.png" alt="text-1">
+        </section>
+        <section class="title-1">
+            <img src="assets/title 1.png" alt="title-1">
+        </section>
+        <section class="text-2">
+            <img src="assets/2.png" alt="text-2">
+        </section>
+        <section class="image-1">
+            <img src="assets/pic 1.png" alt="image 1">
+        </section>
+        <section class="image-2">
+            <img src="assets/pic 2.png" alt="image-2">
+        </section>
+        <section class="text-3">
+            <img src="assets/3.png" alt="text-3">
+        </section>
+        <section class="text-4">
+            <img src="assets/4.png" alt="text-4">
+        </section>
+        <section class="image-3">
+            <img src="assets/pic 3.png" alt="image-3">
+        </section>
+        <section class="text-5">
+            <img src="assets/5.png" alt="text-5">
+        </section>
+        <section class="title-2">
+            <img src="assets/title 2.png" alt="title-2">
+        </section>
+        <section class="bg-text">
+            <img src="assets/bg-mini.png" alt="bg-text">
+        </section>
+        <section class="text-6">
+            <img src="assets/6.png" alt="text-6">
+            <img src="assets/7.png" alt="text-7">
+        </section>
+        <section class="image-4">
+            <img src="assets/pic 4.png" alt="image-4">
+        </section>
+        <section class="text-7">
+            <img src="assets/8.png" alt="text-7">
+        </section>
+    </div>
+    <script>
+        // load về đầu trang
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+                const slideElements = document.querySelectorAll('.headline, .text-1, .title-1, .text-2, .image-1, .image-2, .text-3, .text-4, .image-3, .text-5, .title-2, .bg-text, .text-6 img, .image-4, .text-7');
+                const slideObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, index) => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                entry.target.classList.add('visible');
+                                entry.target.classList.remove('hidden');
+                            }, index * 200); // Delay để tạo hiệu ứng lần lượt
+                        } else {
+                            setTimeout(() => {
+                                entry.target.classList.remove('visible');
+                            }, index * 100); // Delay nhẹ khi ẩn
+                        }
+                    });
+                }, { threshold: 0.1,
+                    rootMargin: '0px 0px -20% 0px'
+                 });
+
+                slideElements.forEach(element => slideObserver.observe(element));
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ------- */
+body{
+    overflow-x: hidden;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+/* ------- */
+/* main */
+.main{
+    width: 100%;
+    position: relative;
+}
+
+/* .cover-top{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+} */
+
+.headline{
+    position: absolute;
+    top: 8.7%;
+}
+
+.headline img{
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-1{
+    position: absolute;
+    top: 13.8%;
+    width: 100%;
+}
+
+.text-1 img, .text-2 img, .text-3 img, .text-5 img, .text-6 img, .text-7 img{
+    width: 52%;
+    display: block;
+    margin: 0 auto;
+}
+
+.title-1 {
+    position: absolute;
+    top: 18.2%;
+    width: 100%;
+}
+
+.title-1 img {
+    width: 43%;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-2 {
+    position: absolute;
+    top: 22.5%;
+    width: 100%;
+}
+
+.image-1{
+    position: absolute;
+    top: 25.8%;
+    width: 100%;
+}
+
+.image-2 {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+.image-2 img {
+    width: 87%;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-3 {
+    position: absolute;
+    top: 39.3%;
+    width: 100%;
+}
+
+.text-4{
+    position: absolute;
+    top: 51.7%;
+    width: 100%;
+}
+
+.text-4 img {
+    width: 44%;
+    margin-left: 85px;
+}
+
+.image-3 {
+    position: absolute;
+    top: 50.9%;
+    width: 100%;
+}
+
+.image-3 img {
+    width: 87%;
+    display: block;
+    margin: 0 auto;
+    padding-left: 8%;
+}
+
+.text-5 {
+    position: absolute;
+    top: 63.1%;
+    width: 100%;
+}
+
+.title-2 {
+    position: absolute;
+    top: 67%;
+    width: 100%;
+}
+
+.title-2 img {
+    width: 77%;
+    display: block;
+    margin: 0 auto;
+}
+
+.bg-text {
+    position: absolute;
+    top: 68.7%;
+    width: 100%;
+}
+
+.text-6 {
+    position: absolute;
+    top: 73.4%;
+    width: 100%;
+}
+
+.text-6 img:nth-of-type(1){
+    padding-bottom: 5%;
+}
+
+.image-4 {
+    position: absolute;
+    top: 80.3%;
+    width: 100%;
+}
+
+.text-7 {
+    position: absolute;
+    top: 87.6%;
+    width: 100%;
+}
+
+.headline,
+.title-1, 
+.title-2,
+.text-1, 
+.text-2, 
+.text-3, 
+.text-4, 
+.text-5, 
+.text-6 img, 
+.text-7{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
+    will-change: opacity, transform; 
+}
+
+.headline.visible,
+.title-1.visible,
+.title-2.visible,
+.text-1.visible,
+.text-2.visible,
+.text-3.visible,
+.text-4.visible,
+.text-5.visible,
+.text-6 img.visible,
+.text-7.visible{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.image-1, 
+.image-2, 
+.image-3, 
+.image-4, 
+.bg-text{
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
+    will-change: opacity, transform; 
+    animation: pulse 3s infinite;
+}
+
+.image-1.visible,
+.image-2.visible,
+.image-3.visible,
+.image-4.visible,
+.bg-text.visible{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02);}
+}
